@@ -94,6 +94,18 @@ A wallet is:
 
 > 📌 This step explicitly binds your identity to this network.
 
+> 🔎 **Network verification (recommended)**  
+> To confirm that your wallet is correctly connected to **Besu Edu-Net**, open the Web3Edu Network Check page:  
+> 👉 https://web3edu.dimikog.org/#/education/network-check  
+>  
+> On this page, verify that:
+> - your wallet is connected
+> - the selected network is **Besu Edu-Net**
+> - your wallet address is displayed correctly
+> - your balance is visible (even if zero)
+>  
+> This step helps you confirm that your Web3 identity is active on the correct network.
+
 ### Step 2 — Create or select a wallet account
 
 1. Create a new wallet account or select an existing one.
