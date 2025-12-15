@@ -11,16 +11,16 @@ In this lab, you will explore how wallets, cryptographic keys, and addresses for
 🎯 Learning Objectives
 
 After completing this lab, you will be able to:
-	•	Explain the role of private keys, public keys, and addresses in Web3 identity
-	•	Understand what a wallet is in the context of a private / permissioned blockchain
-	•	Describe how identity exists before any transaction or smart contract
+	- Explain the role of private keys, public keys, and addresses in Web3 identity
+	- Understand what a wallet is in the context of a private / permissioned blockchain
+	- Describe how identity exists before any transaction or smart contract
 
 ⸻
 
 🧠 Prerequisites
-	•	A modern web browser (Chrome / Firefox / Brave)
-	•	A browser wallet (e.g. MetaMask)
-	•	Access details for the Besu Edu-Net RPC endpoint (provided by the instructor)
+	- A modern web browser (Chrome / Firefox / Brave)
+	- A browser wallet (e.g. MetaMask)
+	- Access details for the Besu Edu-Net RPC endpoint (provided by the instructor)
 
 No prior Web3 or blockchain experience is required.
 
