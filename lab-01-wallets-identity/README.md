@@ -1,4 +1,28 @@
+
 # 🧪 Lab 01 — Wallets, Keys & Web3 Identity (Besu Edu-Net)
+
+## Table of Contents
+
+- [Core concept](#core-concept)
+- [Learning objectives](#-learning-objectives)
+- [Prerequisites](#-prerequisites)
+- [Conceptual background](#-conceptual-background-read-carefully)
+- [Environment](#-environment)
+- [Lab steps](#-lab-steps)
+  - [Step 1 — Configure your wallet for Besu Edu-Net](#step-1--configure-your-wallet-for-besu-edu-net)
+  - [Step 2 — Create or select a wallet account](#step-2--create-or-select-a-wallet-account)
+  - [Step 3 — Inspect your address](#step-3--inspect-your-address)
+  - [Step 4 — Understand the key relationship](#step-4--understand-the-key-relationship)
+  - [Step 5 — Identity without accounts](#step-5--identity-without-accounts)
+- [What to observe](#-what-to-observe)
+- [Completion criteria](#-completion-criteria)
+- [Reflection questions](#-reflection-questions)
+- [What this unlocks](#-what-this-unlocks)
+- [Next lab](#-next-lab)
+- [Notes for educators](#-notes-for-educators)
+- [License](#license)
+
+---
 
 ## Core concept
 
