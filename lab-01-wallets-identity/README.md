@@ -1,4 +1,3 @@
-
 # 🧪 Lab 01 — Wallets, Keys & Web3 Identity (Besu Edu-Net)
 
 ## Table of Contents
@@ -94,18 +93,6 @@ A wallet is:
 
 > 📌 This step explicitly binds your identity to this network.
 
-> 🔎 **Network verification (recommended)**  
-> To confirm that your wallet is correctly connected to **Besu Edu-Net**, open the Web3Edu Network Check page:  
-> 👉 https://web3edu.dimikog.org/#/education/network-check  
->  
-> On this page, verify that:
-> - your wallet is connected
-> - the selected network is **Besu Edu-Net**
-> - your wallet address is displayed correctly
-> - your balance is visible (even if zero)
->  
-> This step helps you confirm that your Web3 identity is active on the correct network.
-
 ### Step 2 — Create or select a wallet account
 
 1. Create a new wallet account or select an existing one.
@@ -154,6 +141,41 @@ Yet:
 - The network can verify your actions cryptographically
 
 This is the foundation of self-sovereign identity.
+
+---
+
+## 🧰 Interactive instruments used in this lab
+
+This lab is supported by a set of **interactive tools** that help you visualize and verify Web3 identity concepts. These tools act as the "lab equipment" for this exercise.
+
+### 🔧 Instrument A — Network Check
+Used to verify that your wallet is correctly connected to **Besu Edu-Net** and that your identity is active on this network.
+
+👉 https://web3edu.dimikog.org/#/education/network-check
+
+On this page, verify that:
+- your wallet is connected
+- the selected network is **Besu Edu-Net**
+- your wallet address is displayed correctly
+- your balance is visible (even if zero)
+
+---
+
+### 🔧 Instrument B — Address Anatomy *(coming soon)*
+Used to visually inspect and understand the structure of an Ethereum address:
+- hexadecimal format
+- fixed length
+- checksum casing
+- relationship to the public key
+
+*(This tool will be provided via the `web3edu-lab-tools` repository.)*
+
+---
+
+### 🔧 Instrument C — Identity Scope Visualizer *(coming soon)*
+Used to understand how the **same wallet identity** can exist across **different blockchain networks**, and why trust and permissions depend on the network you join.
+
+*(This tool will be provided via the `web3edu-lab-tools` repository.)*
 
 ---
 
