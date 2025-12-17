@@ -52,9 +52,6 @@ In this lab, you explore how wallets, cryptographic keys, and addresses form the
 
 ![Wallet, address, and network context](./diagrams/lab01-identity-network.png)
 
-**The address stays the same. The network defines context and trust.**  
-**Η διεύθυνση παραμένει ίδια. Το δίκτυο καθορίζει το πλαίσιο και την εμπιστοσύνη.**
-
 Traditional systems rely on accounts and passwords.
 
 Web3 systems rely on:
