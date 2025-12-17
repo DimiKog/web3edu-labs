@@ -1,5 +1,9 @@
 # 🧪 Lab 01 — Wallets, Keys & Web3 Identity (Besu Edu-Net)
 
+---
+
+## 🇬🇧 English
+
 ## Table of Contents
 
 - [Core concept](#core-concept)
@@ -8,18 +12,13 @@
 - [Conceptual background](#-conceptual-background-read-carefully)
 - [Environment](#-environment)
 - [Lab steps](#-lab-steps)
-  - [Step 1 — Configure your wallet for Besu Edu-Net](#step-1--configure-your-wallet-for-besu-edu-net)
-  - [Step 2 — Create or select a wallet account](#step-2--create-or-select-a-wallet-account)
-  - [Step 3 — Inspect your address](#step-3--inspect-your-address)
-  - [Step 4 — Understand the key relationship](#step-4--understand-the-key-relationship)
-  - [Step 5 — Identity without accounts](#step-5--identity-without-accounts)
+- [Interactive instruments](#-interactive-instruments-used-in-this-lab)
 - [What to observe](#-what-to-observe)
 - [Completion criteria](#-completion-criteria)
 - [Reflection questions](#-reflection-questions)
 - [What this unlocks](#-what-this-unlocks)
 - [Next lab](#-next-lab)
 - [Notes for educators](#-notes-for-educators)
-- [License](#license)
 
 ---
 
@@ -27,43 +26,41 @@
 
 **Identity in Web3 is cryptographic and network-agnostic — but trust is defined by the network you join.**
 
-In this lab, you will explore how wallets, cryptographic keys, and addresses form the basis of identity in a permissioned Ethereum network based on Hyperledger Besu.
+In this lab, you explore how wallets, cryptographic keys, and addresses form the basis of identity in a permissioned Ethereum network based on Hyperledger Besu.
 
 ---
 
 ## 🎯 Learning objectives
 
 - Explain the role of **private keys**, **public keys**, and **addresses** in Web3 identity.
-- Understand what a **wallet** is in the context of a **private / permissioned** blockchain.
-- Describe how identity exists **before** any transaction or smart contract.
+- Understand what a **wallet** is in a **permissioned blockchain**.
+- Describe how identity exists **before** transactions or smart contracts.
 
 ---
 
 ## 🧠 Prerequisites
 
-- A modern web browser (Chrome / Firefox / Brave)
-- A browser wallet (e.g. MetaMask)
-- Access details for the Besu Edu-Net RPC endpoint (provided by the instructor)
-
-No prior Web3 or blockchain experience is required.
+- Modern web browser (Chrome / Firefox / Brave)
+- Browser wallet (MetaMask or equivalent)
+- Besu Edu‑Net RPC details (provided by instructor)
 
 ---
 
 ## 🧩 Conceptual background (read carefully)
 
-In traditional systems:
+### Identity, Address, and Network Context
 
-- Identity is managed by accounts
-- Authentication relies on usernames & passwords
-- A central authority controls access
+![Wallet, address, and network context](./diagrams/lab01-identity-network.png)
 
-In Web3 systems:
+**The address stays the same. The network defines context and trust.**  
+**Η διεύθυνση παραμένει ίδια. Το δίκτυο καθορίζει το πλαίσιο και την εμπιστοσύνη.**
 
-- Identity is based on cryptographic key pairs
-- Ownership is proven using private keys
-- Trust is established by joining a specific network
+Traditional systems rely on accounts and passwords.
 
-In this course, the network is Besu Edu-Net, a permissioned Ethereum network operated for educational and research purposes.
+Web3 systems rely on:
+- cryptographic key pairs
+- locally controlled wallets
+- network‑level trust
 
 A wallet is:
 
@@ -73,171 +70,249 @@ A wallet is:
 
 ## 🛠️ Environment
 
-- **Blockchain network:** Besu Edu-Net (QBFT / permissioned)
-- **Tools:** Browser wallet (MetaMask or equivalent)
-- **Blockchain interaction:** No transactions required; no gas required
+- **Network:** Besu Edu‑Net (permissioned QBFT)
+- **Transactions:** Not required
+- **Gas:** Not required
 
 ---
 
 ## 🧪 Lab steps
 
-### Step 1 — Configure your wallet for Besu Edu-Net
+### Step 1 — Configure your wallet for Besu Edu‑Net
 
-1. Open your browser wallet.
-2. Add a **custom network** using the details provided by the instructor:
-   - **Network Name:** Besu Edu-Net
-   - **RPC URL:** *(provided separately)*
-   - **Chain ID:** *(provided separately)*
-   - **Currency Symbol:** EDU *(or as defined)*
-3. Switch your wallet to **Besu Edu-Net**.
-
-> 📌 This step explicitly binds your identity to this network.
+Add Besu Edu‑Net as a custom network and switch to it.
 
 ### Step 2 — Create or select a wallet account
 
-1. Create a new wallet account or select an existing one.
-2. Ensure the wallet is connected to Besu Edu-Net.
-3. Locate your public address.
-
-> ⚠️ Never share:
-> - your private key
-> - your seed phrase
+Ensure your wallet is connected and note your public address.
 
 ### Step 3 — Inspect your address
 
-1. Copy your wallet address.
-2. Observe:
-   - hexadecimal format
-   - fixed length
-   - checksum casing (if present)
-3. Note:
-   - the address is public
-   - it does not reveal the private key
-   - it uniquely represents you on this network
+Observe format, length, and checksum casing.
 
 ### Step 4 — Understand the key relationship
 
-Reflect on the following facts:
-
-- The private key proves ownership
-- The public key is mathematically derived from the private key
-- The address is derived from the public key
-- This derivation is one-way
-
-➡️ No one can derive your private key from your address.
+Private key → Public key → Address (one‑way derivation).
 
 ### Step 5 — Identity without accounts
 
-Consider the following:
-
-- You did not register with Besu Edu-Net
-- You did not create a username
-- You did not set a password
-
-Yet:
-
-- You have a valid on-chain identity
-- You fully control it
-- The network can verify your actions cryptographically
-
-This is the foundation of self-sovereign identity.
+You have identity without usernames or passwords.
 
 ---
 
 ## 🧰 Interactive instruments used in this lab
 
-This lab is supported by a set of **interactive tools** that help you visualize and verify Web3 identity concepts. These tools act as the "lab equipment" for this exercise.
-
-### 🔧 Instrument A — Network Check
-Used to verify that your wallet is correctly connected to **Besu Edu-Net** and that your identity is active on this network.
-
-👉 https://web3edu.dimikog.org/#/education/network-check
-
-On this page, verify that:
-- your wallet is connected
-- the selected network is **Besu Edu-Net**
-- your wallet address is displayed correctly
-- your balance is visible (even if zero)
+This lab uses a set of standalone, read‑only Web3Edu lab tools
+designed to help students build a correct mental model of identity
+and network context in Web3 systems.
 
 ---
 
-### 🔧 Instrument B — Address Anatomy *(coming soon)*
-Used to visually inspect and understand the structure of an Ethereum address:
-- hexadecimal format
-- fixed length
-- checksum casing
-- relationship to the public key
+### 🔧 Instrument A — Network Identifier
+Identify which blockchain network your wallet is currently operating on.
 
-*(This tool will be provided via the `web3edu-lab-tools` repository.)*
+- Detects the active `chainId`
+- Distinguishes between Ethereum, testnets, and Besu‑based networks
+- Demonstrates that wallet identity persists across networks
+
+*(Provided via the web3edu‑lab‑tools repository)*
 
 ---
 
-### 🔧 Instrument C — Identity Scope Visualizer *(coming soon)*
-Used to understand how the **same wallet identity** can exist across **different blockchain networks**, and why trust and permissions depend on the network you join.
+### 🔧 Instrument B — Address Anatomy
+Visual inspection of Ethereum address structure.
 
-*(This tool will be provided via the `web3edu-lab-tools` repository.)*
+- Prefix, body length, and checksum casing
+- One‑way derivation from public keys
+- Textual representations vs on‑chain identity
+
+*(Provided via the web3edu‑lab‑tools repository)*
+
+---
+
+### 🔧 Instrument C — Identity Scope Visualizer
+Explore how the same wallet address represents different meanings
+across blockchain networks.
+
+- Same address, different balances
+- Identity vs context separation
+- Network‑defined trust
+
+*(Provided via the web3edu‑lab‑tools repository)*
 
 ---
 
 ## 🔍 What to observe
 
-- Identity exists before transactions and smart contracts
-- Wallets manage keys locally, not on the network
-- The same wallet software can connect to different networks, but identity is network-scoped
+- Identity exists before transactions
+- Wallets control keys locally
+- Networks define trust
 
 ---
 
 ## ✅ Completion criteria
 
-- [ ] Connect your wallet to **Besu Edu-Net**.
-- [ ] Identify your public address on this network.
-- [ ] Explain the role of private keys in identity and ownership.
-
-No transaction submission is required.
+- [ ] Wallet connected to Besu Edu‑Net
+- [ ] Public address identified
+- [ ] Explain private key ownership
 
 ---
 
 ## 🧠 Reflection questions
 
-1. Why does Web3 identity not require user accounts?
-2. What would happen if your private key was leaked?
-3. Why is it important that this lab runs on a permissioned Besu network instead of a public testnet?
+1. Why does Web3 identity not require accounts?
+2. What happens if a private key is leaked?
+3. Why use a permissioned Besu network here?
 
 ---
 
 ## 🎁 What this unlocks
 
-- Message signing on Besu Edu-Net (Lab 02)
-- Ownership proofs without transactions
-- Access-controlled smart contracts
-- DAO participation within the Web3Edu ecosystem
+- Message signing
+- Ownership proofs
+- Access‑controlled contracts
 
 ---
 
 ## 🧭 Next lab
 
-➡️ **Lab 02 — Message Signing & Ownership (Besu Edu-Net)**
-
-You will use your wallet to prove ownership of your identity by signing messages verified on the Besu network.
+➡️ **Lab 02 — Message Signing & Ownership**
 
 ---
 
-## 📌 Notes for educators
+## 🇬🇷 Ελληνικά
 
-- This lab:
-  - requires no gas
-  - requires no smart contracts
-  - is ideal as the first lab in a Besu-based course
-- Suitable for:
-  - undergraduate courses
-  - MSc programs
-  - professional training
-- Typical duration: **20–30 minutes**
+## Κεντρική Έννοια
+
+**Η ταυτότητα στο Web3 είναι κρυπτογραφική και ανεξάρτητη δικτύου — η εμπιστοσύνη όμως καθορίζεται από το δίκτυο.**
+
+Σε αυτό το εργαστήριο εξετάζετε πώς πορτοφόλια, κλειδιά και διευθύνσεις αποτελούν τη βάση της ταυτότητας σε ένα αδειοδοτημένο Ethereum δίκτυο (Hyperledger Besu).
 
 ---
 
-## License
+## 🎯 Μαθησιακοί στόχοι
 
-This lab is part of the **Web3Edu Labs** series.
+- Κατανόηση ρόλου ιδιωτικού και δημόσιου κλειδιού
+- Κατανόηση έννοιας πορτοφολιού
+- Κατανόηση ταυτότητας πριν από συναλλαγές
 
-© Web3Edu — Educational and non-commercial use permitted.
+---
+
+## 🧠 Προαπαιτούμενα
+
+- Σύγχρονος browser
+- Πορτοφόλι (π.χ. MetaMask)
+- Στοιχεία πρόσβασης στο Besu Edu‑Net
+
+---
+
+## 🧩 Εννοιολογικό υπόβαθρο
+
+Στο Web3:
+- δεν υπάρχουν λογαριασμοί
+- δεν υπάρχουν κωδικοί
+- η ταυτότητα βασίζεται σε κλειδιά
+
+Το πορτοφόλι είναι:
+
+> Ένα τοπικό εργαλείο που διαχειρίζεται κρυπτογραφικά κλειδιά και υπογράφει μηνύματα.
+
+---
+
+## 🛠️ Περιβάλλον
+
+- **Δίκτυο:** Besu Edu‑Net
+- **Συναλλαγές:** Όχι
+- **Gas:** Όχι
+
+---
+
+## 🧪 Βήματα εργαστηρίου
+
+### Βήμα 1 — Ρύθμιση πορτοφολιού
+
+Προσθέστε το Besu Edu‑Net και συνδεθείτε.
+
+### Βήμα 2 — Επιλογή λογαριασμού
+
+Εντοπίστε τη δημόσια διεύθυνσή σας.
+
+### Βήμα 3 — Παρατήρηση διεύθυνσης
+
+Μορφή, μήκος, checksum.
+
+### Βήμα 4 — Σχέση κλειδιών
+
+Ιδιωτικό → Δημόσιο → Διεύθυνση.
+
+### Βήμα 5 — Ταυτότητα χωρίς λογαριασμούς
+
+Η ταυτότητα υπάρχει χωρίς εγγραφή.
+
+---
+
+## 🧰 Διαδραστικά εργαλεία
+
+Το εργαστήριο χρησιμοποιεί ένα σύνολο αυτόνομων, μόνο για ανάγνωση
+εργαλείων Web3Edu, σχεδιασμένων ώστε να βοηθούν τους φοιτητές
+να διαμορφώσουν ένα σωστό νοητικό μοντέλο ταυτότητας
+και πλαισίου λειτουργίας στα Web3 συστήματα.
+
+---
+
+### 🔧 Εργαλείο A — Αναγνώριση Δικτύου (Network Identifier)
+Αναγνώριση του blockchain δικτύου στο οποίο λειτουργεί το πορτοφόλι.
+
+- Εντοπισμός του ενεργού `chainId`
+- Διάκριση μεταξύ Ethereum, testnets και Besu δικτύων
+- Κατανόηση ότι η ταυτότητα πορτοφολιού παραμένει ίδια σε όλα τα δίκτυα
+
+*(Παρέχεται μέσω του αποθετηρίου web3edu‑lab‑tools)*
+
+---
+
+### 🔧 Εργαλείο B — Ανατομία Διεύθυνσης (Address Anatomy)
+Οπτική ανάλυση της δομής μιας διεύθυνσης Ethereum.
+
+- Πρόθεμα, μήκος, checksum χαρακτήρων
+- Μονόδρομη παραγωγή από δημόσιο κλειδί
+- Κειμενικές αναπαραστάσεις και ταυτότητα blockchain
+
+*(Παρέχεται μέσω του αποθετηρίου web3edu‑lab‑tools)*
+
+---
+
+### 🔧 Εργαλείο C — Οπτικοποίηση Πεδίου Ταυτότητας (Identity Scope)
+Εξερεύνηση του τρόπου με τον οποίο η ίδια διεύθυνση
+αποκτά διαφορετικό νόημα σε διαφορετικά blockchain δίκτυα.
+
+- Ίδια διεύθυνση, διαφορετικά υπόλοιπα
+- Διαχωρισμός ταυτότητας και πλαισίου
+- Η εμπιστοσύνη καθορίζεται από το δίκτυο
+
+*(Παρέχεται μέσω του αποθετηρίου web3edu‑lab‑tools)*
+
+---
+
+## 🔍 Τι να παρατηρήσετε
+
+- Η ταυτότητα προηγείται των συναλλαγών
+- Το δίκτυο καθορίζει εμπιστοσύνη
+
+---
+
+## 🧠 Ερωτήσεις αναστοχασμού
+
+1. Γιατί δεν χρειάζονται λογαριασμοί στο Web3;
+2. Τι συμβαίνει αν διαρρεύσει το ιδιωτικό κλειδί;
+
+---
+
+## 🎁 Τι ξεκλειδώνει
+
+- Υπογραφή μηνυμάτων
+- Απόδειξη ιδιοκτησίας
+
+---
+
+© Web3Edu
