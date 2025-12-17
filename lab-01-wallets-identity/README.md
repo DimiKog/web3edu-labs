@@ -73,17 +73,52 @@ This lab uses a set of standalone, read‑only Web3Edu lab tools:
   https://dimikog.github.io/web3edu-lab-tools/tools/identity-scope/app/
 
 ---
+ ## Step-by-Step Instructions
 
-## Step-by-Step Instructions
+### Step 1 — Configure your wallet for Besu Edu-Net
 
-### Step 1 — Configure your wallet for Besu Edu‑Net
-Add Besu Edu‑Net as a custom network and switch to it.
+1. Open your browser wallet (e.g. MetaMask).
+2. Navigate to **Settings → Networks → Add Network**.
+3. Enter the Besu Edu-Net parameters provided by your instructor.
+4. Save and switch to the new network.
+
+🔎 Optional check:  
+Open the **Network Identifier** tool:  
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/network-identifier/app/
+
+Verify that the `chainId` corresponds to **Besu Edu-Net**.
+
+✅ Expected outcome:  
+Your wallet is connected to Besu Edu-Net and the network is correctly identified.
+
+---
 
 ### Step 2 — Create or select a wallet account
-Ensure your wallet is connected and note your public address.
 
-### Step 3 — Inspect your address
-Observe format, length, and checksum casing.
+1. Create a new account in your wallet **or** select an existing one.
+2. Copy your **public address** (starts with `0x…`).
+
+⚠️ No transactions are required at this stage.
+
+✅ Expected outcome:  
+You have a public address that represents your Web3 identity on Besu Edu-Net.
+
+---
+
+### Step 3 — Inspect your address structure
+
+1. Open the **Address Anatomy** tool:  
+   👉 https://dimikog.github.io/web3edu-lab-tools/tools/address-anatomy/app/
+2. Paste your public address into the input field.
+3. Observe:
+   - the `0x` prefix
+   - the total length (42 characters)
+   - the checksum casing (mixed upper/lower case)
+
+✅ Expected outcome:  
+You can visually recognize and explain the structure of an Ethereum address.
+
+---
 
 ### Step 4 — Understand the key relationship (conceptual)
 
@@ -93,7 +128,7 @@ At this stage, you only need to understand the **existence and role** of keys.
 Private Key  →  Public Key  →  Address
 ```
 
-- This derivation is **one‑way**
+- The derivation is **one-way**
 - The wallet manages keys **on your behalf**
 - The address represents your identity **on a given network**
 
@@ -102,10 +137,33 @@ Private Key  →  Public Key  →  Address
 📌 Key generation, storage, and security practices are covered in a **separate dedicated lab**.
 
 ✅ Expected outcome:  
-You can conceptually explain how wallets, keys, and addresses relate, without handling keys directly.
+You can conceptually explain how wallets, keys, and addresses relate without handling keys directly.
 
-### Step 5 — Identity without accounts
-You now have identity without usernames or passwords.
+---
+
+### Step 5 — Identity across networks
+
+1. Open the **Identity Scope Visualizer** tool:  
+   👉 https://dimikog.github.io/web3edu-lab-tools/tools/identity-scope/app/
+2. Use the same public address.
+3. Compare how the address appears across different networks.
+
+✅ Expected outcome:  
+You understand that the **identity (address)** stays the same, while **meaning and trust** are defined by the network.
+
+---
+
+### Step 6 — Identity without accounts
+
+Reflect on the following:
+- You did not create a username
+- You did not register an account
+- You did not provide personal data
+
+Yet, you already possess a valid Web3 identity.
+
+✅ Expected outcome:  
+You can explain how Web3 identity exists independently of centralized account systems.
 
 ---
 
