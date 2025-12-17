@@ -1,4 +1,4 @@
-# Lab 01 — Wallets, Keys & Web3 Identity (Besu Edu‑Net)
+# Lab 01 — Wallets & Web3 Identity (Besu Edu‑Net)
 
 🎓 Part of **Web3Edu Labs**  
 🌐 Lab landing page: https://web3edu.dimikog.org/labs/wallets-keys  
@@ -9,9 +9,10 @@
 
 ## Learning Objectives
 By completing this lab, you will be able to:
-- Explain the role of **private keys**, **public keys**, and **addresses** in Web3 identity
-- Understand what a **wallet** is in a **permissioned blockchain**
+- Explain how **wallets and addresses** form the basis of Web3 identity
+- Understand the role of a **wallet** in a **permissioned blockchain**
 - Describe how identity exists **before** transactions or smart contracts
+- Recognize the **existence of cryptographic keys** without managing them directly
 
 ---
 
@@ -30,6 +31,16 @@ Web3 systems rely on:
 - cryptographic key pairs
 - locally controlled wallets
 - network‑level trust
+
+🔎 **Scope note**
+
+In this lab, cryptographic keys (private/public) are treated at a **conceptual level only**.
+You are **not expected to generate, export, or manage keys**.
+
+A dedicated follow‑up lab will focus exclusively on:
+- private vs public keys
+- key generation and storage
+- security implications and key loss
 
 A wallet is:
 
@@ -52,9 +63,14 @@ A wallet is:
 ## Tools Used
 This lab uses a set of standalone, read‑only Web3Edu lab tools:
 
-- **Network Identifier** — Detects the active `chainId` and network context *(web3edu‑lab‑tools)*
-- **Address Anatomy** — Visual inspection of Ethereum address structure *(web3edu‑lab‑tools)*
-- **Identity Scope Visualizer** — Same address, different network meaning *(web3edu‑lab‑tools)*
+- **Network Identifier** — Detects the active `chainId` and network context  
+  https://dimikog.github.io/web3edu-lab-tools/tools/network-identifier/app/
+
+- **Address Anatomy** — Visual inspection of Ethereum address structure  
+  https://dimikog.github.io/web3edu-lab-tools/tools/address-anatomy/app/
+
+- **Identity Scope Visualizer** — Same address, different network meaning  
+  https://dimikog.github.io/web3edu-lab-tools/tools/identity-scope/app/
 
 ---
 
@@ -69,8 +85,24 @@ Ensure your wallet is connected and note your public address.
 ### Step 3 — Inspect your address
 Observe format, length, and checksum casing.
 
-### Step 4 — Understand the key relationship
-Private key → Public key → Address (one‑way derivation).
+### Step 4 — Understand the key relationship (conceptual)
+
+At this stage, you only need to understand the **existence and role** of keys.
+
+```
+Private Key  →  Public Key  →  Address
+```
+
+- This derivation is **one‑way**
+- The wallet manages keys **on your behalf**
+- The address represents your identity **on a given network**
+
+⚠️ You are **not expected** to access, export, or manipulate keys in this lab.
+
+📌 Key generation, storage, and security practices are covered in a **separate dedicated lab**.
+
+✅ Expected outcome:  
+You can conceptually explain how wallets, keys, and addresses relate, without handling keys directly.
 
 ### Step 5 — Identity without accounts
 You now have identity without usernames or passwords.
@@ -146,9 +178,14 @@ Complete the following:
 ## Εργαλεία που Χρησιμοποιούνται
 Το εργαστήριο χρησιμοποιεί αυτόνομα, read‑only εργαλεία Web3Edu:
 
-- **Network Identifier** — Εντοπίζει το ενεργό `chainId` και το πλαίσιο δικτύου *(web3edu‑lab‑tools)*
-- **Address Anatomy** — Οπτική ανάλυση της δομής διεύθυνσης Ethereum *(web3edu‑lab‑tools)*
-- **Identity Scope Visualizer** — Ίδια διεύθυνση, διαφορετικό νόημα ανά δίκτυο *(web3edu‑lab‑tools)*
+- **Network Identifier** — Εντοπίζει το ενεργό `chainId` και το πλαίσιο δικτύου  
+  https://dimikog.github.io/web3edu-lab-tools/tools/network-identifier/app/index.gr.html
+
+- **Address Anatomy** — Οπτική ανάλυση της δομής διεύθυνσης Ethereum  
+  https://dimikog.github.io/web3edu-lab-tools/tools/address-anatomy/app/index.gr.html
+
+- **Identity Scope Visualizer** — Ίδια διεύθυνση, διαφορετικό νόημα ανά δίκτυο  
+  https://dimikog.github.io/web3edu-lab-tools/tools/identity-scope/app/index.gr.html
 
 ---
 
