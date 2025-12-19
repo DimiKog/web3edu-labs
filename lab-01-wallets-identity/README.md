@@ -1,7 +1,7 @@
 # Lab 01 — Wallets & Web3 Identity (Besu Edu‑Net)
 
 🎓 Part of **Web3Edu Labs**  
-🌐 Lab landing page: https://web3edu.dimikog.org/labs/wallets-keys  
+🌐 Lab landing page: https://web3edu.dimikog.org/#/labs/wallets-keys
 
 ---
 
@@ -401,7 +401,7 @@ Block Explorer: https://blockexplorer.dimikog.org
 - ενημερώσετε το μαθησιακό σας προφίλ
 - ξεκλειδώσετε το επόμενο εργαστήριο
 
-👉 https://web3edu.dimikog.org/labs
+👉 https://web3edu.dimikog.org/#/labs/wallets-keys
 
 ---
 
