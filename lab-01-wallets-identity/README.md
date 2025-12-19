@@ -53,6 +53,14 @@ A wallet is:
 - Browser wallet (MetaMask or equivalent)
 - Besu Edu‑Net RPC details (provided by instructor)
 
+### Besu Edu‑Net (MetaMask Configuration)
+
+Network Name: Besu Edu‑Net  
+RPC URL: https://rpc.dimikog.org/rpc  
+Chain ID: 424242  
+Currency Symbol: EDU-D  
+Block Explorer: https://blockexplorer.dimikog.org
+
 ### Environment
 - **Network:** Besu Edu‑Net (permissioned QBFT)
 - **Transactions:** Not required
@@ -82,11 +90,11 @@ This lab uses a set of standalone, read‑only Web3Edu lab tools:
 3. Enter the Besu Edu-Net parameters provided by your instructor.
 4. Save and switch to the new network.
 
-🔎 Optional check:  
+🔎 Mandatory verification:  
 Open the **Network Identifier** tool:  
 👉 https://dimikog.github.io/web3edu-lab-tools/tools/network-identifier/app/
 
-Verify that the `chainId` corresponds to **Besu Edu-Net**.
+⚠️ If the detected network does not match Besu Edu‑Net, do not proceed.
 
 ✅ Expected outcome:  
 Your wallet is connected to Besu Edu-Net and the network is correctly identified.
@@ -183,9 +191,16 @@ Complete the following:
 
 ---
 
-## What’s Next
-➡️ **Lab 02 — Message Signing & Ownership**  
-🌐 https://web3edu.dimikog.org/labs/message-signing
+## Lab Completion
+
+🎯 You have completed **Lab 01 — Wallets & Web3 Identity**.
+
+Return to **Web3Edu** to:
+- mark the lab as completed
+- update your learning profile
+- unlock the next lab
+
+👉 https://web3edu.dimikog.org/labs
 
 ---
 
@@ -239,6 +254,14 @@ Complete the following:
 - Πορτοφόλι browser (π.χ. MetaMask)
 - Στοιχεία RPC για το Besu Edu‑Net (από τον/την διδάσκοντα/ουσα)
 
+### Ρύθμιση Besu Edu‑Net (MetaMask)
+
+Όνομα Δικτύου: Besu Edu‑Net  
+RPC URL: https://rpc.dimikog.org/rpc  
+Chain ID: 424242  
+Νόμισμα: EDU-D  
+Block Explorer: https://blockexplorer.dimikog.org
+
 ### Περιβάλλον
 - **Δίκτυο:** Besu Edu‑Net (permissioned QBFT)
 - **Συναλλαγές:** Δεν απαιτούνται
@@ -269,11 +292,11 @@ Complete the following:
 3. Συμπληρώστε τις παραμέτρους του Besu Edu-Net που σας δόθηκαν.
 4. Αποθηκεύστε και επιλέξτε το νέο δίκτυο.
 
-🔎 Προαιρετικός έλεγχος:  
+🔎 Υποχρεωτικός έλεγχος:  
 Ανοίξτε το εργαλείο **Network Identifier**:  
 👉 https://dimikog.github.io/web3edu-lab-tools/tools/network-identifier/app/index.gr.html
 
-Επιβεβαιώστε ότι το `chainId` αντιστοιχεί στο **Besu Edu-Net**.
+⚠️ Αν το δίκτυο δεν αντιστοιχεί στο Besu Edu‑Net, μην συνεχίσετε το εργαστήριο.
 
 ✅ Αναμενόμενο αποτέλεσμα:  
 Το πορτοφόλι σας είναι συνδεδεμένο στο Besu Edu-Net και το δίκτυο αναγνωρίζεται σωστά.
@@ -369,9 +392,16 @@ Complete the following:
 
 ---
 
-## Επόμενο Lab
-➡️ **Lab 02 — Message Signing & Ownership**  
-🌐 https://web3edu.dimikog.org/labs/message-signing
+## Ολοκλήρωση Εργαστηρίου
+
+🎯 Ολοκληρώσατε το **Lab 01 — Wallets & Web3 Identity**.
+
+Επιστρέψτε στο **Web3Edu** για να:
+- δηλώσετε την ολοκλήρωση του εργαστηρίου
+- ενημερώσετε το μαθησιακό σας προφίλ
+- ξεκλειδώσετε το επόμενο εργαστήριο
+
+👉 https://web3edu.dimikog.org/labs
 
 ---
 
