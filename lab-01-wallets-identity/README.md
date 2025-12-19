@@ -51,7 +51,7 @@ A wallet is:
 ## Prerequisites
 - Modern web browser (Chrome / Firefox / Brave)
 - Browser wallet (MetaMask or equivalent)
-- Besu Edu‑Net RPC details (provided by instructor)
+- Besu Edu‑Net RPC details (provided by below)
 
 ### Besu Edu‑Net (MetaMask Configuration)
 
@@ -87,7 +87,7 @@ This lab uses a set of standalone, read‑only Web3Edu lab tools:
 
 1. Open your browser wallet (e.g. MetaMask).
 2. Navigate to **Settings → Networks → Add Network**.
-3. Enter the Besu Edu-Net parameters provided by your instructor.
+3. Enter the Besu Edu-Net parameters provided above.
 4. Save and switch to the new network.
 
 🔎 Mandatory verification:  
@@ -252,7 +252,7 @@ Return to **Web3Edu** to:
 ## Προαπαιτούμενα
 - Σύγχρονος browser (Chrome / Firefox / Brave)
 - Πορτοφόλι browser (π.χ. MetaMask)
-- Στοιχεία RPC για το Besu Edu‑Net (από τον/την διδάσκοντα/ουσα)
+- Στοιχεία RPC για το Besu Edu‑Net (βλ. παρακάτω)
 
 ### Ρύθμιση Besu Edu‑Net (MetaMask)
 
