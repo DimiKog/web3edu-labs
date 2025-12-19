@@ -200,7 +200,7 @@ Return to **Web3Edu** to:
 - update your learning profile
 - unlock the next lab
 
-👉 https://web3edu.dimikog.org/labs
+👉 https://web3edu.dimikog.org/#/labs/wallets-keys
 
 ---
 
