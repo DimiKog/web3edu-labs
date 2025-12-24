@@ -230,7 +230,7 @@ You understand that encryption/decryption happens **locally**.
 
 ## Lab Completion
 
-🎯 You have completed **Lab 02 — Encrypted Messages & Ownership**.
+🎯 You have completed **Lab 02 — Encrypted Messages**.
 
 Return to **Web3Edu** to:
 - mark the lab as completed
@@ -477,7 +477,7 @@ Return to **Web3Edu** to:
 
 ## Ολοκλήρωση Εργαστηρίου
 
-🎯 Ολοκληρώσατε το **Εργαστήριο 02 — Κρυπτογραφημένα Μηνύματα & Ιδιοκτησία**.
+🎯 Ολοκληρώσατε το **Εργαστήριο 02 — Κρυπτογραφημένα Μηνύματα**.
 
 Επιστρέψτε στο **Web3Edu** για να:
 - σημειώσετε το εργαστήριο ως ολοκληρωμένο
