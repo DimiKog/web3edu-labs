@@ -176,7 +176,7 @@ In this lab, the tools:
 
 👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-encryptor/app/
 
-1. Choose the receiver’s public key (from the Key Generator tool)
+1. Choose the receiver’s **public key (not wallet address)** from the Key Generator tool
 2. Write a short message
 3. Encrypt the message using the receiver’s **public key**
 
@@ -189,6 +189,8 @@ The encrypted output is a JSON payload containing:
 - `nonce`
 - `ephemPublicKey`
 - `ciphertext`
+
+💡 The `ephemPublicKey`, `nonce`, and `ciphertext` together allow reconstruction of the decryption box.
 
 ➡️ You must share the **full JSON payload** with the receiver.
 
@@ -422,7 +424,7 @@ Return to **Web3Edu** to:
 
 👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-encryptor/app/index.gr.html
 
-1. Επιλέξτε το **δημόσιο κλειδί του παραλήπτη** (από το εργαλείο Key Generator)
+1. Επιλέξτε το **δημόσιο κλειδί του παραλήπτη** από το εργαλείο Key Generator (όχι τη διεύθυνση του πορτοφολιού)
 2. Γράψτε ένα σύντομο μήνυμα
 3. Κρυπτογραφήστε το μήνυμα χρησιμοποιώντας το **δημόσιο κλειδί** του παραλήπτη
 
@@ -435,6 +437,8 @@ Return to **Web3Edu** to:
 - `nonce`
 - `ephemPublicKey`
 - `ciphertext`
+
+💡 Το `ephemPublicKey`, το `nonce` και το `ciphertext` μαζί επιτρέπουν την ανακατασκευή του κουτιού αποκρυπτογράφησης.
 
 ➡️ Πρέπει να μοιραστείτε **ολόκληρο** το JSON payload με τον παραλήπτη.
 
