@@ -62,6 +62,7 @@ This provides **authenticity and integrity**.
 ✅ No transactions  
 ✅ No smart contracts  
 ✅ No blockchain interaction  
+✅ No message delivery or storage  
 
 ❌ Not a messaging app  
 ❌ Not gas‑based  
@@ -101,6 +102,87 @@ This is a **wallet-level limitation by design**, not a limitation of cryptograph
 
 ### Step 1 — Understand the key model (conceptual)
 
+### Step 1a — Generate cryptographic identity (Key Generator tool)
+
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/key-generator/app/
+
+### 🔁 End‑to‑End Cryptographic Flow (Lab 02)
+
+```
+┌────────────────────┐
+│   Key Generator    │
+│  (Educational)     │
+│                    │
+│  Input Text        │
+│      ↓             │
+│  Private Key       │
+│      ↓             │
+│  Public Key        │
+│      ↓             │
+│  Address           │
+└─────────┬──────────┘
+          │
+          │  (share public key)
+          ▼
+┌────────────────────┐
+│ Message Encryptor  │
+│                    │
+│  Message +         │
+│  Receiver Public   │
+│  Key               │
+│      ↓             │
+│  Encrypted Payload │
+└─────────┬──────────┘
+          │
+          │  (send encrypted data)
+          ▼
+┌────────────────────┐
+│ Message Decryptor  │
+│                    │
+│  Encrypted Payload │
+│  + Private Key     │
+│      ↓             │
+│  Original Message  │
+└────────────────────┘
+```
+
+📌 **Key takeaway:**  
+Public keys enable **encryption**.  
+Private keys enable **decryption**.  
+Ownership equals control of the private key.
+
+Before using wallets for encryption, you will first generate a cryptographic identity manually.
+
+Using the **Key Generator** tool, you will:
+- provide a text input (educational only)
+- hash the input with **keccak256** (Ethereum-style)
+- interpret the hash as a 256‑bit **private key** (secp256k1)
+- derive the corresponding **public key**
+- derive an Ethereum‑style **address**
+
+This tool helps you understand where keys and addresses come from,
+without relying on wallet software or hidden randomness.
+
+📌 You will use the **public key** generated here in the Message Encryptor tool.
+Encryption requires a public key, not an address.
+
+Outputs are shown as a JSON object:
+```json
+{
+  "input": "alice",
+  "privateKey": "0x…",
+  "publicKey": "0x…",
+  "address": "0x…"
+}
+```
+
+⚠️ This process is **deterministic**:
+- the same input always produces the same keys
+- this is intentional for learning purposes (not how real wallets generate keys)
+
+This tool is **not a wallet** and does **not** store keys securely.  
+Never use these keys for real funds.
+
 Every wallet controls a key pair:
 
 ```
@@ -119,15 +201,25 @@ In this lab, the wallet:
 
 ---
 
-### Step 2 — Encrypt a message (confidentiality)
+### Step 2 — Encrypt a message (Confidentiality)
 
-1. Choose a **receiver’s public address**
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-encryptor/app/
+
+1. Choose the receiver’s public key (from the Key Generator tool)
 2. Write a short message
 3. Encrypt the message using the receiver’s **public key**
 
 🔐 Result:
 - The encrypted message is unreadable
 - Only the receiver can decrypt it
+
+The encrypted output is a JSON payload containing:
+- `version`
+- `nonce`
+- `ephemPublicKey`
+- `ciphertext`
+
+➡️ You must share the **full JSON payload** with the receiver.
 
 ✅ Expected outcome:  
 You understand how encryption protects message confidentiality.
@@ -136,8 +228,11 @@ You understand how encryption protects message confidentiality.
 
 ### Step 3 — Decrypt the message (receiver side)
 
-1. Use the receiver’s wallet
-2. Decrypt the encrypted payload
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-decryptor/app/
+
+1. Use the receiver’s private key (from the Key Generator)
+2. Paste the encrypted JSON payload
+3. Decrypt locally in the browser
 
 🔓 Result:
 - The original message is revealed
@@ -278,6 +373,7 @@ Return to **Web3Edu** to:
 - Δεν απαιτεί συναλλαγές  
 - Δεν χρησιμοποιεί smart contracts  
 - Δεν αλληλεπιδρά με blockchain  
+- Δεν αποστέλλει ή αποθηκεύει μηνύματα  
 
 ### ❌ Τι δεν είναι
 - Δεν είναι εφαρμογή messaging  
@@ -320,6 +416,92 @@ Return to **Web3Edu** to:
 
 ### Βήμα 1 — Κατανόηση μοντέλου κλειδιών (εννοιολογικά)
 
+### Βήμα 1α — Δημιουργία κρυπτογραφικής ταυτότητας (εργαλείο Key Generator)
+
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/key-generator/app/index.gr.html
+
+### 🔁 Ροή Κρυπτογραφίας από Άκρη σε Άκρη (Lab 02)
+
+```
+┌────────────────────┐
+│   Key Generator    │
+│  (Εκπαιδευτικό)    │
+│                    │
+│  Κείμενο Εισόδου   │
+│      ↓             │
+│  Ιδιωτικό Κλειδί   │
+│      ↓             │
+│  Δημόσιο Κλειδί    │
+│      ↓             │
+│  Διεύθυνση         │
+└─────────┬──────────┘
+          │
+          │  (μοιράσου δημόσιο κλειδί)
+          ▼
+┌────────────────────┐
+│ Message Encryptor  │
+│                    │
+│  Μήνυμα +          │
+│  Δημόσιο Κλειδί    │
+│  Παραλήπτη         │
+│      ↓             │
+│  Κρυπτογραφημένο   │
+│  Payload           │
+└─────────┬──────────┘
+          │
+          │  (στείλε κρυπτογραφημένα δεδομένα)
+          ▼
+┌────────────────────┐
+│ Message Decryptor  │
+│                    │
+│  Κρυπτογραφημένο   │
+│  Payload +         │
+│  Ιδιωτικό Κλειδί   │
+│      ↓             │
+│  Αρχικό Μήνυμα     │
+└────────────────────┘
+```
+
+📌 **Βασικό συμπέρασμα:**  
+Τα δημόσια κλειδιά επιτρέπουν **κρυπτογράφηση**.  
+Τα ιδιωτικά κλειδιά επιτρέπουν **αποκρυπτογράφηση**.  
+Η ιδιοκτησία ισούται με τον έλεγχο του ιδιωτικού κλειδιού.
+
+Πριν χρησιμοποιήσετε wallets για κρυπτογράφηση, θα δημιουργήσετε πρώτα
+μια κρυπτογραφική ταυτότητα χειροκίνητα.
+
+Χρησιμοποιώντας το εργαλείο **Key Generator**, θα:
+- δώσετε ένα κείμενο εισόδου (μόνο για εκπαιδευτικούς σκοπούς)
+- κάνετε hash της εισόδου με **keccak256** (τύπου Ethereum)
+- ερμηνεύσετε το hash ως **ιδιωτικό κλειδί** 256‑bit (secp256k1)
+- παράγετε το αντίστοιχο **δημόσιο κλειδί**
+- παράγετε μια **διεύθυνση τύπου Ethereum**
+
+Το εργαλείο αυτό σας βοηθά να κατανοήσετε από πού προέρχονται
+τα κλειδιά και οι διευθύνσεις, χωρίς να βασίζεστε σε wallet
+ή «κρυφή» τυχαιότητα.
+
+📌 Θα χρησιμοποιήσετε το **δημόσιο κλειδί** που παράγεται εδώ
+στο εργαλείο **Message Encryptor**.
+Η κρυπτογράφηση απαιτεί δημόσιο κλειδί, όχι διεύθυνση.
+
+Τα αποτελέσματα εμφανίζονται ως JSON:
+```json
+{
+  "input": "alice",
+  "privateKey": "0x…",
+  "publicKey": "0x…",
+  "address": "0x…"
+}
+```
+
+⚠️ Αυτή η διαδικασία είναι **ντετερμινιστική**:
+- η ίδια είσοδος παράγει πάντα τα ίδια κλειδιά
+- αυτό είναι σκόπιμο για εκπαιδευτικούς λόγους (όχι όπως στα πραγματικά wallets)
+
+Το εργαλείο **δεν είναι wallet** και **δεν** αποθηκεύει κλειδιά με ασφάλεια.  
+Μην χρησιμοποιείτε αυτά τα κλειδιά για πραγματικά κεφάλαια.
+
 ```
 Ιδιωτικό Κλειδί  →  Δημόσιο Κλειδί  →  Διεύθυνση
 ```
@@ -336,15 +518,25 @@ Return to **Web3Edu** to:
 
 ---
 
-### Βήμα 2 — Κρυπτογράφηση μηνύματος (ιδιωτικότητα)
+### Βήμα 2 — Κρυπτογράφηση μηνύματος (Ιδιωτικότητα)
 
-1. Επιλέξτε μια **δημόσια διεύθυνση παραλήπτη**
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-encryptor/app/index.gr.html
+
+1. Επιλέξτε το **δημόσιο κλειδί του παραλήπτη** (από το εργαλείο Key Generator)
 2. Γράψτε ένα σύντομο μήνυμα
 3. Κρυπτογραφήστε το μήνυμα χρησιμοποιώντας το **δημόσιο κλειδί** του παραλήπτη
 
 🔐 Αποτέλεσμα:
 - Το κρυπτογραφημένο μήνυμα δεν είναι αναγνώσιμο
 - Μόνο ο παραλήπτης μπορεί να το αποκρυπτογραφήσει
+
+Το κρυπτογραφημένο αποτέλεσμα είναι JSON payload με:
+- `version`
+- `nonce`
+- `ephemPublicKey`
+- `ciphertext`
+
+➡️ Πρέπει να μοιραστείτε **ολόκληρο** το JSON payload με τον παραλήπτη.
 
 ✅ Αναμενόμενο αποτέλεσμα:  
 Κατανοείτε πώς η κρυπτογράφηση προστατεύει την εμπιστευτικότητα του μηνύματος.
@@ -353,8 +545,11 @@ Return to **Web3Edu** to:
 
 ### Βήμα 3 — Αποκρυπτογράφηση του μηνύματος (πλευρά παραλήπτη)
 
-1. Χρησιμοποιήστε το πορτοφόλι του παραλήπτη
-2. Αποκρυπτογραφήστε το κρυπτογραφημένο φορτίο (payload)
+👉 https://dimikog.github.io/web3edu-lab-tools/tools/message-decryptor/app/index.gr.html
+
+1. Χρησιμοποιήστε το ιδιωτικό κλειδί του παραλήπτη (από το Key Generator)
+2. Επικολλήστε το κρυπτογραφημένο JSON payload
+3. Αποκρυπτογραφήστε τοπικά στον browser
 
 🔓 Αποτέλεσμα:
 - Το αρχικό μήνυμα αποκαλύπτεται
