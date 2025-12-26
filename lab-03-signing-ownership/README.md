@@ -1,5 +1,3 @@
-
-
 # ✍️ Lab 03 — Message Signing & Ownership
 
 Part of **Web3Edu Labs**
@@ -76,15 +74,23 @@ No network. No gas. No contracts.
 
 ## 🛠️ Tools in This Lab
 
-### ✍️ Message Signer
-- Signs arbitrary messages
-- Uses either:
-  - wallet (MetaMask)
-  - raw private key (educational mode)
-- Outputs:
-  - message
-  - signature
-  - signer address
+### ✍️ Message Signer (Core Tool)
+
+This is the primary hands-on tool of Lab 03, allowing you to experiment directly with message signing.
+
+It demonstrates in real time:
+- live message hashing
+- signature changes on every keystroke
+- deterministic link between message + private key → signature
+
+🔗 Tool:  
+Message Signer (Web3Edu)  
+→ https://web3edu.dimikog.org/tools/message-signer/
+
+📦 Source code:  
+https://github.com/DimiKog/web3edu-tools/tree/main/message-signer
+
+*Educational note:* The raw private key mode is provided for learning purposes only. Wallets like MetaMask will replace this in later labs for secure signing.
 
 ### 🔍 Signature Verifier
 - Takes:
@@ -221,15 +227,23 @@ A signature can authorize real actions.
 
 ## 🛠️ Εργαλεία του Lab
 
-### ✍️ Υπογραφέας Μηνύματος
-- Υπογράφει αυθαίρετα μηνύματα
-- Χρησιμοποιεί είτε:
-  - wallet (MetaMask)
-  - ακατέργαστο ιδιωτικό κλειδί (εκπαιδευτική λειτουργία)
-- Παράγει:
-  - μήνυμα
-  - υπογραφή
-  - διεύθυνση υπογράφοντα
+### ✍️ Υπογραφέας Μηνυμάτων (Κύριο Εργαλείο)
+
+Αυτό είναι το βασικό εργαλείο πρακτικής του Lab 03, που σας επιτρέπει να πειραματιστείτε άμεσα με την υπογραφή μηνυμάτων.
+
+Δείχνει σε πραγματικό χρόνο:
+- ζωντανό κατακερματισμό μηνύματος
+- αλλαγές στην υπογραφή με κάθε πληκτρολόγηση
+- τον ντετερμινιστικό σύνδεσμο μεταξύ μηνύματος + ιδιωτικού κλειδιού → υπογραφή
+
+🔗 Εργαλείο:  
+Υπογραφέας Μηνυμάτων (Web3Edu)  
+→ https://web3edu.dimikog.org/tools/message-signer/
+
+📦 Κώδικας πηγής:  
+https://github.com/DimiKog/web3edu-tools/tree/main/message-signer
+
+*Σημείωση για εκπαίδευση:* Η χρήση ακατέργαστου ιδιωτικού κλειδιού παρέχεται μόνο για σκοπούς μάθησης. Τα wallets, όπως το MetaMask, θα αντικαταστήσουν αυτή τη λειτουργία σε επόμενα εργαστήρια για ασφαλή υπογραφή.
 
 ### 🔍 Επαλήθευση Υπογραφής
 - Λαμβάνει:
@@ -293,9 +307,3 @@ A signature can authorize real actions.
 > **Ποτέ μην υπογράφετε μηνύματα που δεν καταλαβαίνετε.**
 
 Μια υπογραφή μπορεί να εξουσιοδοτήσει πραγματικές ενέργειες.
-
-## ⚠️ Σημαντική Προειδοποίηση
-
-> **Μην υπογράφετε ποτέ μηνύματα που δεν καταλαβαίνετε.**
-
-Η υπογραφή έχει πραγματικές συνέπειες.
