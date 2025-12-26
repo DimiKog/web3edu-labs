@@ -41,14 +41,19 @@ By completing this lab, you will understand that:
 
 ## 🔐 Signing vs Encryption (Critical Distinction)
 
-| Concept | Encryption | Signing |
-|------|-----------|--------|
-| Goal | Confidentiality | Authenticity |
-| Who can read | Only receiver | Everyone |
-| Who can verify | Receiver | Anyone |
-| Uses private key | ❌ | ✅ |
-| Uses public key | ❌ | ✅ |
-| Blockchain required | ❌ | ❌ |
+Both **encryption** and **signing** use **public‑key cryptography**.
+
+The difference is **how the keys are used** and **what is being proven**:
+
+- 🔐 **Encryption** protects **who can read** a message  
+  - The sender encrypts using the receiver’s **public key**
+  - Only the receiver can decrypt using their **private key**
+  - The goal is **confidentiality**
+
+- ✍️ **Signing** proves **who created** a message  
+  - The signer signs using their **private key**
+  - Anyone can verify using the signer’s **public key**
+  - The goal is **authenticity and intent**
 
 This lab focuses **only on signing**.
 
@@ -181,16 +186,21 @@ A signature can authorize real actions.
 
 ## 🔐 Υπογραφή vs Κρυπτογράφηση (Κρίσιμη Διάκριση)
 
-| Έννοια | Κρυπτογράφηση | Υπογραφή |
-|------|---------------|----------|
-| Σκοπός | Μυστικότητα | Αυθεντικότητα |
-| Ποιος διαβάζει | Μόνο ο παραλήπτης | Όλοι |
-| Ποιος επαληθεύει | Παραλήπτης | Οποιοσδήποτε |
-| Ιδιωτικό κλειδί | ❌ | ✅ |
-| Δημόσιο κλειδί | ❌ | ✅ |
-| Blockchain | ❌ | ❌ |
+Τόσο η **κρυπτογράφηση** όσο και η **υπογραφή** χρησιμοποιούν **δημόσιας‑κλείδας κρυπτογραφία**.
 
-Το εργαστήριο επικεντρώνεται **μόνο στην υπογραφή**.
+Η διαφορά βρίσκεται στο **πώς χρησιμοποιούνται τα κλειδιά** και **τι αποδεικνύεται**:
+
+- 🔐 **Κρυπτογράφηση** προστατεύει το **ποιος μπορεί να διαβάσει** ένα μήνυμα  
+  - Ο αποστολέας κρυπτογραφεί με το **δημόσιο κλειδί** του παραλήπτη
+  - Μόνο ο παραλήπτης μπορεί να αποκρυπτογραφήσει με το **ιδιωτικό του κλειδί**
+  - Στόχος είναι η **εμπιστευτικότητα**
+
+- ✍️ **Υπογραφή** αποδεικνύει το **ποιος δημιούργησε** το μήνυμα  
+  - Ο υπογράφων χρησιμοποιεί το **ιδιωτικό του κλειδί**
+  - Οποιοσδήποτε μπορεί να επαληθεύσει με το **δημόσιο κλειδί**
+  - Στόχος είναι η **αυθεντικότητα και η πρόθεση**
+
+Το εργαστήριο αυτό επικεντρώνεται **μόνο στην υπογραφή**.
 
 ---
 
